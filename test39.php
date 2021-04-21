@@ -63,3 +63,21 @@ $data = [
 
 
 /* ===== Ваш код ниже ===== */
+
+$res = $data['animals']['others'][0][1]['name'];
+
+echo $res;
+echo "<br>";
+
+$arr1 = $data['question'];
+$arr2 = $data['animals']['birds'];
+$arr3 = $data['animals']['others'][0];
+$arr4 = $data['parts'];
+
+// print_r ($arr3);
+
+$result = $arr1[0] . " " . $arr2[0]['name'] . " не " . $arr3[0]['name'] . " и " . $arr1[2] . " им " . $arr1[3] . " " . $arr4['feathers']  ;
+echo $result;
+
+
+// почему грачи не кошки и зачем им столько перьев", используя данные из этого массива $data
