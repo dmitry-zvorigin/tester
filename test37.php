@@ -41,6 +41,34 @@ foreach ($data as $taxi => $val) {
 
 }
 
+$num = 1000;
+$arr = [];
+$run = '';
+
+foreach ($cars as $keys){
+    $str =  "{$keys['name']}, стоит на {$keys['position']} км, ";
+    $res = $keys['position'] - $passenger;
+    if ($res < 0 )
+        $res += 1000;
+    $str .= "до пассажира {$res} км ";
+    if (!$keys['isFree'])
+        $str .= "(занят)";
+    else {
+        $str .= "(свободен)";
+        if ($res < $num){
+            $run = $keys['name'];
+            $num = $res;
+        }
+    }
+    $arr[$keys['name']] = $str;
+}
+
+foreach ($arr as $keys => $value){
+    if ($keys == $run)
+        $value .= " - едет это такси";
+    echo $value;
+    echo "<br>";
+}
 
     // "Такси 1, стоит на 15 км, до пассажира 3 км (занят)"
     // "Такси 2, стоит на 0 км, до пассажира 12 км (свободен) - едет это такси"
