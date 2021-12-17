@@ -7,7 +7,7 @@
 // Ожидается на выходе
 // [2, 4]
 
-$reslut = [];
+$reslut = [1, 2, 3, 4, 5];
 foreach ($arr as $val){
     if (($val % 2) == 0){
     $reslut[] = $val;
