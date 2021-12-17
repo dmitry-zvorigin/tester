@@ -65,10 +65,6 @@ for($i=1; $i < $n-1; $i++) {
 echo implode(' ', $fib);
 
 
-/*
-* Код с урока Geekbrains
-*/
-
 function Fibbo ($n){
     $num1 = 0;
     $num2 = 1;
